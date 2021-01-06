@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Todo Application</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="content">
+            <div class="row">
+                <div class="text-center text-light bg-info col-md-12">
+                    <h1>Todo Application</h1>
+                    <p>Track todos that never before</p>
+                </div>
+            </div>
+            <div class="search">
+                <div class="container">
+                    <form>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <input type="text" class="search-todo form-control" placeholder="Filter todos"/>
+                            </div>
+                            <div class="col-md-8 form-check checkbox">
+                                <label>
+                                    <input type="checkbox" class="hidecompleted" />Hide completed
+                                </label>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="container">
+                <div class="row status-header">
+                    <h5 class="status text-danger col-md-12 font-weight-bold"></h5>
+                </div>
+                <div class="todo-form">
+                    <form>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <input type="text" class="new-todo form-control" placeholder="Enter todo" required="true"/>
+                            </div>
+                            <div class="col-md-4">
+                                <button type="submit" class="submit-todo btn btn-primary">Add Todo</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <br/>
+                <div class="row">
+                    <div class="todos col-md-12"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer mt-4 text-center">
+        <div class="container text-center">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <p><b>Designed and Developed by MOHD ARAFAT</b></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+     <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-firestore.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  var firebaseConfig = {
+    apiKey: "AIzaSyC_7MXtF3N5FF7x5ZtgpJawX6IoBcbEWr8",
+    authDomain: "todo-app-d24f6.firebaseapp.com",
+    projectId: "todo-app-d24f6",
+    storageBucket: "todo-app-d24f6.appspot.com",
+    messagingSenderId: "363912140576",
+    appId: "1:363912140576:web:dc3022153dd762be472945",
+    measurementId: "G-LNC8S8HLM1"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  const db=firebase.firestore();
+</script>
+<script src="uuidv4.js"></script>
+    <script src="jquery.js"></script>
+    <script src="app.js"> </script>
+</body>
+</html>
